@@ -1,0 +1,60 @@
+.pagination {
+	display: grid;
+	place-content: center;
+	height: 100vh;
+	background:transparent;
+}
+
+.pagination .nav {
+	display: flex;
+	flex-direction: column;
+	background: #fff;
+	position: relative;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+	box-shadow: 0 5px 5px -5px rgba(2, 136, 209, 0.15), 0 10px 10px -5px rgba(2, 136, 209, 0.15), 0 15px 15px -5px rgba(2, 136, 209, 0.15), 0 20px 20px -5px rgba(2, 136, 209, 0.15);
+}
+
+.pagination .nav--link {
+	flex: 1;
+	padding: 50px;
+	list-style: none;
+	text-align: center;
+	position: relative;
+	font-size: 20px;
+	font-weight: bold;
+	transition: 0.5s ease;
+	cursor: pointer;
+	user-select: none;
+}
+
+.pagination .nav--link:hover {
+	color: #60f476;
+}
+
+.pagination .nav--link:hover:nth-of-type(2) ~ .nav--bar {
+	top: 20%;
+}
+
+.pagination .nav--link:hover:nth-of-type(3) ~ .nav--bar {
+	top: 40%;
+}
+
+.pagination .nav--link:hover:nth-of-type(4) ~ .nav--bar {
+	top: 60%;
+}
+
+.pagination .nav--link:hover:nth-of-type(5) ~ .nav--bar {
+	top: 80%;
+}
+
+.pagination .nav--bar {
+	top: 0;
+	left: 0;
+	position: absolute;
+	background: #60f476;
+	width: 5px;
+	height: 20%;
+	transition: 0.35s cubic-bezier(0.32, 1.4, 0.13, 1.4);
+}
